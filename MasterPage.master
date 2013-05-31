@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>母版页</title>
+    <script type="text/javascript" src="App_Themes/Default/bootstrap.js" ></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="brand" href="#">蔡志彬</a>
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                              <li class="active"><a href="Default.aspx">首页</a></li>
+                              <li><a href="WareShow.aspx">商品展示</a></li>
+                              <li><a href="WareQuery.aspx">商品查询</a></li>
+                              <li><a href="WareManage.aspx">商品管理</a></li>
+                              <li><a href="WareShoppingCart.aspx">购物车</a></li>
+                              <li><a href="OnlineVoting.aspx">在线投票</a></li>
+                              <li><a href="#">留言板</a></li>
+                           
+                            </ul>
+<%--                            <form class="navbar-search pull-left" style=" margin-top:10px;">
+                              <input type="text" class="search-query" placeholder="Search" style=" height:15px;">
+                            </form>--%>
+
+                            <div class=" pull-right" style="height:33px; padding-top:7px;">
+                                <asp:Label ID="Lab_LogState" runat="server" Text="游客!"></asp:Label>
+                                <asp:Label ID="Lab_Scar" runat="server" Text="购物车 0"></asp:Label>
+                                <asp:TextBox ID="Text_Name" runat="server" style=" width:100px; margin:0; padding:0;" placeholder="用户名\邮箱" ></asp:TextBox>
+                                <asp:TextBox ID="Text_Pwd" runat="server" 
+                                    style=" width:100px; margin:0; padding:0;" placeholder="密码" TextMode="Password"></asp:TextBox>
+                                <%--<asp:CheckBox ID="Check_Rem" runat="server" />记住我 --%>
+                                <%--<input id="Checkbox1" type="checkbox" /> --%> 
+                           
+                                <asp:Button ID="Btn_Login" CssClass="btn" style=" margin-top:0;" runat="server" 
+                                    Text="登录" onclick="Btn_Login_Click" />
+                                <asp:Button ID="Btn_Logout" runat="server" CssClass="btn" style=" margin-top:0;" Visible="false" 
+                                    runat="server" Text="登出" onclick="Btn_Logout_Click" />
+                                <asp:Button ID="Btn_Reg" CssClass="btn" style=" margin-top:0;" runat="server" 
+                                    Text="注册" onclick="Btn_Reg_Click" />
+
+                            </div>                   
+                        </div>                    
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+            </asp:ContentPlaceHolder>
+        </div>       
+        <div class="modal-footer">
+            <div class="text-center">
+                
+                <p></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

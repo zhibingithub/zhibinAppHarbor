@@ -1,0 +1,23 @@
+﻿body{
+    padding:40px 0 0 0;
+    margin:0;
+}
+.shoppingshow
+{
+    padding-left:100px;
+    padding-bottom:40px;
+}
+.shoppingshow_title
+{
+    width:400px;
+}
+.shoppingshow_image
+{
+    width:144px;
+    height:144px;
+}
+.shoppingshow_price
+{
+    width:300px;
+    height:40px;
+}
